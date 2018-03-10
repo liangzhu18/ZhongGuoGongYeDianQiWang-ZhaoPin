@@ -1,4 +1,4 @@
-package personal;
+package zhaopin.hibernate.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

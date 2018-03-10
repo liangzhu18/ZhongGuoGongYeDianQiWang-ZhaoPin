@@ -1,8 +1,8 @@
-package personal;
+package zhaopin.hibernate;
 
 import org.springframework.data.repository.CrudRepository;
 
-import personal.User;
+import zhaopin.hibernate.entity.User;
 
 // This will be AUTO IMPLEMENTED by Spring into a Bean called userRepository
 // CRUD refers Create, Read, Update, Delete

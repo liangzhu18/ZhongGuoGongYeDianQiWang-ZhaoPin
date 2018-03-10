@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>cc.dhu</groupId>
-    <artifactId>ZhongGuoGongYeDianQiWang-ZhangPin</artifactId>
+    <artifactId>ZhongGuoGongYeDianQiWang-ZhaoPin</artifactId>
     <version>0.1.0</version>
 
     <parent>

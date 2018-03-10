@@ -7,3 +7,6 @@ http://blog.csdn.net/qq_26787115/article/details/52133008
 
 2.如何使用git？这里有一个仿真教程。
 https://try.github.io/
+
+3.github如何实现fork的项目与原项目同步 - 简书
+https://www.jianshu.com/p/fede3333205f

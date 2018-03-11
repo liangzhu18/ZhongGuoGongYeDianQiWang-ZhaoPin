@@ -1,28 +1,20 @@
 package zhaopin.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import zhaopin.hibernate.ActivitiesEntranceRepository;
 import zhaopin.hibernate.NavRepository;
 import zhaopin.hibernate.RecommendKeywordsRepository;
-
 import zhaopin.hibernate.entity.ActivitiesEntrance;
 import zhaopin.hibernate.entity.Nav;
 import zhaopin.hibernate.entity.RecommendKeywords;
 
 @Component
 public class AddDataService {
-	@Autowired
-	private NavRepository navRepository;
 	
-	@Autowired
-	private ActivitiesEntranceRepository activitiesEntranceRepository;
-	
-	@Autowired
-	private RecommendKeywordsRepository recommendKeywordsRepository;
-	
-	public void run() {
+	public void run(NavRepository navRepository, 
+			ActivitiesEntranceRepository activitiesEntranceRepository,
+			RecommendKeywordsRepository recommendKeywordsRepository) {
 		System.out.println("hello");
 		Nav n1 = new Nav();
 		n1.setName("首页");

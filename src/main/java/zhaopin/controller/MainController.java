@@ -10,9 +10,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import zhaopin.hibernate.ActivitiesEntranceRepository;
 import zhaopin.hibernate.NavRepository;
 import zhaopin.hibernate.RecommendKeywordsRepository;
+import zhaopin.hibernate.CategoryRepository;
+import zhaopin.hibernate.OrganizationServiceRepository;
 import zhaopin.hibernate.UserRepository;
 import zhaopin.hibernate.entity.ActivitiesEntrance;
 import zhaopin.hibernate.entity.Nav;
+import zhaopin.hibernate.entity.Category;
+import zhaopin.hibernate.entity.OrganizationService;
 import zhaopin.hibernate.entity.RecommendKeywords;
 import zhaopin.hibernate.entity.User;
 import zhaopin.service.AddDataService;
@@ -32,6 +36,12 @@ public class MainController {
 	
 	@Autowired
 	private RecommendKeywordsRepository recommendKeywordsRepository;
+	
+	@Autowired
+	private CategoryRepository categoryRepository;
+	
+	@Autowired
+	private OrganizationServiceRepository organizationServiceRepository;
 
 	@GetMapping(path="/add") // Map ONLY GET Requests
 	public @ResponseBody String addNewUser (@RequestParam String name
@@ -52,7 +62,10 @@ public class MainController {
 
 		new AddDataService().run(navRepository, 
 				activitiesEntranceRepository,
-			    recommendKeywordsRepository);
+			    recommendKeywordsRepository,
+			    categoryRepository,
+			    organizationServiceRepository
+			    );
 
 		return "Saved";
 	}
@@ -61,6 +74,16 @@ public class MainController {
 	public @ResponseBody Iterable<Nav> getNavs() {
 		// This returns a JSON or XML with the users
 		return navRepository.findAll();
+	}
+	@GetMapping(path="/getCategory")
+	public @ResponseBody Iterable<Category> getCategory() {
+		// This returns a JSON or XML with the users
+		return categoryRepository.findAll();
+	}
+	@GetMapping(path="/getOrganizationService")
+	public @ResponseBody Iterable<OrganizationService> getOrganizationService() {
+		// This returns a JSON or XML with the users
+		return organizationServiceRepository.findAll();
 	}
 	
 	@GetMapping(path="/getActivitiesEntrance")

@@ -3,19 +3,129 @@ package zhaopin.service;
 import org.springframework.stereotype.Component;
 
 import zhaopin.hibernate.ActivitiesEntranceRepository;
+import zhaopin.hibernate.CategoryRepository;
 import zhaopin.hibernate.NavRepository;
+import zhaopin.hibernate.OrganizationServiceRepository;
 import zhaopin.hibernate.RecommendKeywordsRepository;
 import zhaopin.hibernate.entity.ActivitiesEntrance;
 import zhaopin.hibernate.entity.Nav;
 import zhaopin.hibernate.entity.RecommendKeywords;
+import zhaopin.hibernate.entity.Category;
+import zhaopin.hibernate.entity.OrganizationService;
 
 @Component
 public class AddDataService {
 	
 	public void run(NavRepository navRepository, 
 			ActivitiesEntranceRepository activitiesEntranceRepository,
-			RecommendKeywordsRepository recommendKeywordsRepository) {
-		System.out.println("hello");
+			RecommendKeywordsRepository recommendKeywordsRepository,
+			CategoryRepository categoryRepository,
+			OrganizationServiceRepository organizationServiceRepository )
+	{
+		Category c1 = new Category();
+		c1.setName("互联网/电子商务");
+		c1.setValue("#");
+		Category c2 = new Category();
+		c2.setName("金融/投资/证券");
+		c2.setValue("#");
+		Category c3 = new Category();
+		c3.setName("汽车及零配件");
+		c3.setValue("#");
+		Category c4 = new Category();
+		c4.setName("房地产");
+		c4.setValue("#");
+		Category c5 = new Category();
+		c5.setName("测试工程师");
+		c5.setValue("#");
+		Category c6 = new Category();
+		c6.setName("理财顾问");
+		c6.setValue("#");
+		Category c7 = new Category();
+		c7.setName("结构/设计");
+		c7.setValue("#");
+		Category c8 = new Category();
+		c8.setName("成本管理");
+		c8.setValue("#");
+		Category c9 = new Category();
+		c9.setName("Java开发");
+		c9.setValue("#");
+		Category c10 = new Category();
+		c10.setName("风险控制");
+		c10.setValue("#");
+		Category c11 = new Category();
+		c11.setName("销售经理");
+		c11.setValue("#");
+		Category c12 = new Category();
+		c12.setName("销售/市场");
+		c12.setValue("#");
+		Category c13 = new Category();
+		c13.setName("网络推广");
+		c13.setValue("#");
+		Category c14 = new Category();
+		c14.setName("经济研究员");
+		c14.setValue("#");
+		Category c15 = new Category();
+		c15.setName("售后服务");
+		c15.setValue("#");
+		Category c16 = new Category();
+		c16.setName("财务经理");
+		c16.setValue("#");
+		
+		categoryRepository.save(c1);
+		categoryRepository.save(c2);
+		categoryRepository.save(c3);
+		categoryRepository.save(c4);
+		categoryRepository.save(c5);
+		categoryRepository.save(c6);
+		categoryRepository.save(c7);
+		categoryRepository.save(c8);
+		categoryRepository.save(c9);
+		categoryRepository.save(c10);
+		categoryRepository.save(c11);
+		categoryRepository.save(c12);
+		categoryRepository.save(c13);
+		categoryRepository.save(c14);
+		categoryRepository.save(c15);
+		categoryRepository.save(c16);
+		
+		OrganizationService o1 = new OrganizationService();
+		o1.setName("企业入口");
+		o1.setValue("#");
+		OrganizationService o2 = new OrganizationService();
+		o2.setName("企业服务");
+		o2.setValue("#");
+		OrganizationService o3 = new OrganizationService();
+		o3.setName("人事外包");
+		o3.setValue("#");
+		OrganizationService o4 = new OrganizationService();
+		o4.setName("调研中心");
+		o4.setValue("#");
+		OrganizationService o5 = new OrganizationService();
+		o5.setName("企业培训");
+		o5.setValue("#");
+		OrganizationService o6 = new OrganizationService();
+		o6.setName("典范雇主");
+		o6.setValue("#");
+		OrganizationService o7 = new OrganizationService();
+		o7.setName("在线测评");
+		o7.setValue("#");
+		OrganizationService o8 = new OrganizationService();
+		o8.setName("薪酬调查");
+		o8.setValue("#");
+		
+		organizationServiceRepository.save(o1);
+		organizationServiceRepository.save(o2);
+		organizationServiceRepository.save(o3);
+		organizationServiceRepository.save(o4);
+		organizationServiceRepository.save(o5);
+		organizationServiceRepository.save(o6);
+		organizationServiceRepository.save(o7);
+		organizationServiceRepository.save(o8);
+		
+		
+	
+		
+		
 		Nav n1 = new Nav();
 		n1.setName("首页");
 		n1.setValue("#");
